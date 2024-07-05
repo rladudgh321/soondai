@@ -4,7 +4,7 @@ import axios from 'axios';
 axios.defaults.baseURL = backUrl;
 axios.defaults.withCredentials = true;
 
-export async function addPostAPI(data: { title: string, content: string, token: string | null }) {
+export async function addPostAPI(data: { title: string, content: string, published: boolean, highlight: boolean, token: string | null }) {
   const headers = {
     Authorization:`Bearer ${data?.token}`
   }
